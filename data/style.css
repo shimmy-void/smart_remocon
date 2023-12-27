@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0.6rem 0rem;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #222;
+  color: #8A8A8A;
+}
+
+fieldset {
+  border-radius: 0.5rem;
+  border-color: #8A8A8A;
+}
+
+fieldset legend {
+  padding: 0.5rem;
+}
+
+.icon {
+  font-size: 1.6em;
+  width: 1.4em;;
+}
+
+.icon .btn {
+  color: #000;
+}
+
+.btn {
+  height: 1.9rem;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.8rem;
+  text-align: center;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 0.2rem #888;
+}
+
+.btn.off {
+  color: #000;
+  background-color: #CCC;  
+}
+
+.btn.off:hover {
+  background-color: #AAA;
+}
+
+.btn.off:active {
+  background-color: #AAA;
+  box-shadow: 0 0.1rem #666;
+  transform: translateY(0.1rem);
+}
+
+.btn.on {
+  color: #999;
+  background-color: #07e4e4;
+}
+
+.btn.on.on-frozen {
+  pointer-events: none;
+}
+
+.btn.on:hover {
+  background-color: #059F9F;
+}
+
+.btn.on.power {
+  color: #000;
+  background-color: #e22831;
+}
+
+.btn.on.power:hover {
+  background-color: #91191f;
+}
+
+.btn.on.power:active {
+  background-color: #91191f;
+  box-shadow: 0 0.1rem #666;
+  transform: translateY(0.1rem);
+}
+
+.slct {
+  width: 4rem;
+  height: 2rem;
+  padding: 0.3rem 0.5rem;
+  font-size: 1rem;
+  text-align: center;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.2rem #888;
+
+}
+
+.slct.off {
+  color: #000;
+  background-color: #CCC;
+}
+
+.slct:hover {
+  background-color: #AAA;
+}
+
+.slct.on {
+  color: #999;
+  background-color: #07e4e4;
+}
+
+.vol-and-ch {
+  width: 15rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.vol-and-ch p {
+  padding-right: 0.5rem;
+}
+
+.btns-horizontal.btn {
+  display: inline;
+}
+
+.btns-vertical {
+  width: 3rem;
+}
+
+.btns-vertical.btn {
+  display: block;
+}
+
+.txt-and-btns {
+  display: flex;
+  align-items: center;
+}
+
+.txt-ac {
+  background-color: #8A8A8A;
+  font-family: "Orbitron";
+  font-size: 1.6em;
+  color: #000;
+  text-align: right;
+  width: 6.5rem;
+  height: 3.2rem;
+  padding: 0rem 0.2em;
+  margin: 0rem 0.2em;
+  line-height: 2em;
+  border-radius: 5px;
+}
+
+.vertical {
+  margin: 0.3rem;
+}
+
+.horizontal {
+  display: flex;
+  align-items: center;
+}

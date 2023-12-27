@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Remote Controller</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='shortcut icon' type='image/x-icon' href='favicon.ico'/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://kit.fontawesome.com/63180bb3c6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <fieldset>
+    <legend><i class="fa-solid fa-tv icon"></i> TV</legend>
+    <button type="button" class="btn off" id="btn-tv-power"><i class="fa-solid fa-power-off icon"></i></button>
+    <div class="container">
+      <div class="vol-and-ch">
+        <p>Volume</p>
+        <div class="btns-vertical">
+          <button type="button" class="btn off" id="btn-tv-volp"><i class="fa-solid fa-volume-high icon"></i></button>
+          <button type="button" class="btn off" id="btn-tv-volm"><i class="fa-solid fa-volume-low icon"></i></button>
+        </div>
+        <p>Channel</p>
+        <div class="btns-vertical">
+          <button type="button" class="btn off" id="btn-tv-chp"><i class="fa-solid fa-angle-up icon"></i></button>
+          <button type="button" class="btn off" id="btn-tv-chm"><i class="fa-solid fa-angle-down icon"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <p>Misc</p>
+      <button type="button" class="btn off" id="btn-tv-mute"><i class="fa-solid fa-volume-xmark icon"></i></button>
+      <button type="button" class="btn off" id="btn-tv-chngin"><i class="fa-solid fa-display icon"></i></button>
+      <button type="button" class="btn off" id="btn-tv-prog"><i class="fa-solid fa-table-list icon"></i></button>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend><i class="fa-solid fa-tornado icon"></i> Air Conditioner</legend>
+    <button type="button" class="btn off power" id="btn-ac-power"><i class="fa-solid fa-power-off icon"></i><span id="txt-ac-power"> OFF</span></button>
+    <div class="container">
+      <p>Mode</p>
+      <button type="button" class="btn off on-frozen" id="btn-ac-mode-auto"><i class="fa-solid fa-a icon"></i></button>
+      <button type="button" class="btn off on-frozen" id="btn-ac-mode-heat"><i class="fa-solid fa-fire-flame-curved icon"></i></button>
+      <button type="button" class="btn off on-frozen" id="btn-ac-mode-cool"><i class="fa-solid fa-snowflake icon"></i></button>
+      <button type="button" class="btn off on-frozen" id="btn-ac-mode-dry"><i class="fa-solid fa-droplet icon"></i></button>
+      <button type="button" class="btn off on-frozen" id="btn-ac-mode-fan"><i class="fa-solid fa-fan icon"></i></button>
+    </div>
+    <div class="container">
+      <p><i class="fa-solid fa-wind icon"></i> Fan</p>
+      <div class="horizontal">
+        <div class="vertical">
+          <p>Speed</p>
+          <div class="btns-horizontal">
+            <button type="button" class="btn off" id="btn-ac-fanspeed-auto"><i class="fa-solid fa-a icon"></i></button>
+            <select name="fanspeed" class="slct off" id="slct-fanspeed">
+              <option value="0">-----</option>
+              <option value="1">Quiet</option>
+              <option value="3">Low</option>
+              <option value="6">Med</option>
+              <option value="8">High</option>
+            </select>
+          </div>
+        </div>
+        <div class="vertical">
+          <p>Angle</p>
+          <div class="btns-horizontal">
+            <button type="button" class="btn off" id="btn-ac-swing"><i class="fa-solid fa-repeat icon"></i></button>
+            <select name="fanangle" class="slct off" id="slct-fanangle">
+              <option value="15">-----</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <p><i class="fa-solid fa-gear icon"></i>Misc</p>
+      <div class="btns-horizontal">
+        <button type="button" class="btn off" id="btn-ac-economy"><i class="fa-solid fa-money-bill-wave icon"></i></button>
+        <button type="button" class="btn off" id="btn-ac-clean"><i class="fa-solid fa-droplet-slash icon"></i></button>
+        <button type="button" class="btn off" id="btn-ac-powerful"><i class="fa-solid fa-bolt icon"></i></button>
+      </div>
+    </div>
+    <div class="container">
+      <p><i class="fa-solid fa-temperature-full icon"></i> Temperature</p>
+      <div class="txt-and-btns">
+        <div class="txt-ac" id="txt-ac-temp"> C</div>
+        <div class="btns-vertical">
+          <button type="button" class="btn off" id="btn-ac-tempp"><i class="fa-solid fa-temperature-arrow-up icon"></i></button>
+          <button type="button" class="btn off" id="btn-ac-tempm"><i class="fa-solid fa-temperature-arrow-down icon"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <p><i class="fa-solid fa-clock icon"></i> Sleep Timer</p>
+      <div class="txt-and-btns">
+        <button type="button" class="btn off" id="btn-ac-slptimer"><i class="fa-solid fa-moon icon"></i></button>
+        <div class="txt-ac" id="txt-ac-slptimer"></div>
+        <div class="btns-vertical">
+          <button type="button" class="btn off" id="btn-ac-slptimerp"><i class="fa-solid fa-chevron-up icon"></i></button>
+          <button type="button" class="btn off" id="btn-ac-slptimerm"><i class="fa-solid fa-chevron-down icon"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <p><i class="fa-solid fa-clock icon"></i> On Timer</p>
+      <div class="txt-and-btns">
+        <button type="button" class="btn off" id="btn-ac-ontimer"><i class="fa-regular fa-lightbulb icon"></i></button>
+        <div class="txt-ac" id="txt-ac-ontimer"></div>
+        <div class="btns-vertical">
+          <button type="button" class="btn off" id="btn-ac-ontimerp"><i class="fa-solid fa-chevron-up icon"></i></button>
+          <button type="button" class="btn off" id="btn-ac-ontimerm"><i class="fa-solid fa-chevron-down icon"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <p><i class="fa-solid fa-clock icon"></i> Off Timer</p>
+      <div class="txt-and-btns">
+        <button type="button" class="btn off" id="btn-ac-offtimer"><i class="fa-solid fa-lightbulb icon"></i></button>
+        <div class="txt-ac" id="txt-ac-offtimer"></div>
+        <div class="btns-vertical">
+          <button type="button" class="btn off" id="btn-ac-offtimerp"><i class="fa-solid fa-chevron-up icon"></i></button>
+          <button type="button" class="btn off" id="btn-ac-offtimerm"><i class="fa-solid fa-chevron-down icon"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <p><i class="fa-solid fa-star icon"></i>Special (Valid only when powered off )</p>
+      <div class="btns-horizontal">
+        <button type="button" class="btn off" id="btn-ac-outsidequiet"><i class="fa-solid fa-volume-low icon"></i></button>
+        <button type="button" class="btn off" id="btn-ac-ecofan"><i class="fa-solid fa-headphones icon"></i></button>
+        <button type="button" class="btn off" id="btn-ac-sterilization"><i class="fa-solid fa-virus-slash icon"></i></button>
+      </div>
+    </div>
+  </fieldset>
+  <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
